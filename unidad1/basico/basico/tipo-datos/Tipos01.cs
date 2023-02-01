@@ -8,9 +8,15 @@ namespace basico.tipo_datos
 {
     internal class Tipos01
     {
-        public Tipos01()
+        public String saludo { get; set; }
+
+        public Tipos01(String v1)
         {
-            Console.WriteLine("Hola desde Tipos01");
+            this.saludo = v1;
+            String sNombre = this.saludo + ", Juan Perez";
+
+            Console.WriteLine(sNombre);
+            
         }
     }
 }
