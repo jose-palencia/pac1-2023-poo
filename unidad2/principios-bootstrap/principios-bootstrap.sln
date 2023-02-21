@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "principios-bootstrap", "principios-bootstrap\principios-bootstrap.csproj", "{33D40E4A-3613-42B3-9EBC-E280FFB1D866}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33D40E4A-3613-42B3-9EBC-E280FFB1D866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D40E4A-3613-42B3-9EBC-E280FFB1D866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D40E4A-3613-42B3-9EBC-E280FFB1D866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D40E4A-3613-42B3-9EBC-E280FFB1D866}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {659A7E55-D0A8-47FD-BB6C-A69A19DA0F63}
+	EndGlobalSection
+EndGlobal
