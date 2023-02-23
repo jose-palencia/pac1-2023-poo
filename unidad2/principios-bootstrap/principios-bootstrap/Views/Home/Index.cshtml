@@ -226,7 +226,7 @@
     </tfoot>
 </table>*@
 
-<h2>Ejemplo 12: Ratio</h2>
+@*<h2>Ejemplo 12: Ratio</h2>
 
 <h5>Sin Ratio</h5>
 
@@ -237,3 +237,155 @@
 <div class="ratio ratio-16x9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcIQ7xkFxd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
+<hr />
+
+<div class="row gy-3">
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcIQ7xkFxd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcIQ7xkFxd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcIQ7xkFxd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>*@
+
+@*<h2>Ejemplo 13: Tamaños</h2>
+<h4>Anchura</h4>
+<div class="w-25 bg-primary">Ancho 25%</div>
+<div class="w-50 bg-primary">Ancho 50%</div>
+<div class="w-75 bg-primary">Ancho 75%</div>
+<div class="w-100 bg-primary">Ancho 100%</div>
+<div class="w-auto bg-primary">Ancho auto</div>
+
+<h4>Alturas</h4>
+<div class="bg-info" style="height: 100px;">
+    <div class="h-25 d-inline-block bg-primary">Altura 25%</div>
+    <div class="h-50 d-inline-block bg-primary">Altura 50%</div>
+    <div class="h-75 d-inline-block bg-primary">Altura 75%</div>
+    <div class="h-100 d-inline-block bg-primary">Altura 100%</div>
+    <div class="h-auto d-inline-block bg-primary">Altura Auto</div>
+</div>
+
+<h2>Todo el ancho y alto del viewport</h2>
+<div class="vw-100 bg-success">Anchura 100vw</div>
+<div class="vh-100 bg-warning">Altura 100vh</div>*@
+
+@*<h2>Ejemplo 14: Formularios</h2>
+
+<form>
+    <div class="mb-3">
+        <label class="form-label">Correo Electronico</label>
+        <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <textarea class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Color favorito</label>
+        <select class="form-select">
+            <option selected>Color favorito</option>
+            <option value="1">Azul</option>
+            <option value="2">Rojo</option>
+            <option value="3">Verde</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-check-label">Es empleado</label>
+        <input type="checkbox" class="form-check-input" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-check-label">Es mujer</label>
+        <input type="radio" name="genero" value="F" class="form-check-input" />
+    </div>
+    <div class="mb-3">
+        <label class="form-check-label">Es hombre</label>
+        <input type="radio" name="genero" value="M" class="form-check-input" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Correo Electronico</label>
+        <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo" disabled />
+    </div>
+
+    <div class="mb-3 form-floating">
+        <input type="email" name="correo" class="form-control" placeholder="Correo Electronico" />
+        <label class="form-label">Correo Electronico</label>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Contraseña</label>
+        <input type="password" name="correo" class="form-control" placeholder="Ingrese su contraseña" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Color de camisa</label>
+        <input type="color" name="color-camisa" class="form-control form-control-color" />
+    </div>
+
+    <div class="mb-3">
+        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-secondary">Cancelar</button>
+    </div>
+
+</form>
+
+<h2>Ejemplo 15: Formulario en columnas</h2>
+
+<form class="row">
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Nombres" />
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Apellidos" />
+    </div>
+    <div class="col">
+        <button type="button" class="btn btn-primary" >Enviar</button>
+    </div>
+</form>*@
+
+<h2>Ejemplo 16: Alertas</h2>
+@*<div class="alert alert-success" role="alert">Alerta Exitosa</div>
+<div class="alert alert-danger" role="alert">Alerta Error</div>
+<div class="alert alert-warning" role="alert">Alerta Advertencia</div>*@
+
+<button class="btn btn-primary" onclick="mostrarAlertaExitosa()" >Mostrar alerta exitoso</button>
+<button class="btn btn-primary" onclick="mostrarAlertaError()">Mostrar alerta error</button>
+
+<div>
+    Las alertas se van a mostrar aquí
+</div>
+
+<div id="contenedor-alerta"></div>
+
+@section Scripts {
+    <script>
+        function mostrarAlertaExitosa() {
+        
+        }
+
+        function mostrarAlertaError() {
+        
+        }
+
+        function mostrarAlerta(mensaje, tipo) {
+            const alerta = document.createElement('div');
+            alerta.innerHTML = ``;
+
+
+        }
+    </script>
+}
