@@ -357,11 +357,11 @@
     </div>
 </form>*@
 
-<h2>Ejemplo 16: Alertas</h2>
+@*<h2>Ejemplo 16: Alertas</h2>
 @*<div class="alert alert-success" role="alert">Alerta Exitosa</div>
 <div class="alert alert-danger" role="alert">Alerta Error</div>
 <div class="alert alert-warning" role="alert">Alerta Advertencia</div>*@
-
+@*
 <button class="btn btn-primary" onclick="mostrarAlertaExitosa()" >Mostrar alerta exitoso</button>
 <button class="btn btn-primary" onclick="mostrarAlertaError()">Mostrar alerta error</button>
 
@@ -371,21 +371,55 @@
 
 <div id="contenedor-alerta"></div>
 
+
 @section Scripts {
     <script>
         function mostrarAlertaExitosa() {
-        
+            mostrarAlerta('Éste es un mensaje exitoso', 'success');
         }
 
         function mostrarAlertaError() {
-        
+            mostrarAlerta('Éste es un mensaje de error', 'danger');
         }
 
         function mostrarAlerta(mensaje, tipo) {
             const alerta = document.createElement('div');
-            alerta.innerHTML = ``;
+            alerta.innerHTML = `
+               <div class="alert alert-${tipo} alert-dismissible fade show" role="alert">${mensaje}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+               </div>
+            `;
 
+            const contenedorAlertas = document.getElementById('contenedor-alerta');
+            contenedorAlertas.append(alerta);
 
         }
     </script>
 }
+*@
+
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miPrimerModal">Abrir Modal</button>
+
+<div class="modal fade" id="miPrimerModal" tabindex="1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Título del modal</h5>
+                <button type="button" class="btn btn-close" data-bs-toggle="modal" data-bs-target="#miPrimerModal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Este es un formulario pequeño de ejemplo</p>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
