@@ -2,5 +2,44 @@
     width: 200px;
     margin: 2rem;
     border-radius: 50%;
-/*    border: 5px solid black;*/
+    /*    border: 5px solid black;*/
+}
+
+.seccion-bienvenida {
+    margin:3rem 0 7rem 0;
+    color: white;
+}
+
+.seccion-bienvenida h2 {
+    margin-bottom:  1rem;   
+}
+
+.seccion-bienvenida p {
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.cabecera {
+    font-weight: bold;
+}
+
+.experiencia-i {
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 5px 5px 0 gray;
+}
+
+.experiencia-d {
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 5px 5px 0 gray;
+}
+
+.habilidades ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.habilidades i {
+    color: #523ADB;
+    font-size: 50px;
 }
