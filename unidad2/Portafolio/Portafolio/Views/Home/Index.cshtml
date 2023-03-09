@@ -1,5 +1,4 @@
-﻿@*@model Persona
-*@
+﻿@model HomeIndexViewModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -16,85 +15,13 @@
 }
 
 @*Bloque Presentación*@
-<div class="text-center mb-3">
-    <h1 class="display-4">Soy José López Palencia</h1>
-    
-    @*<h4>@hoy.ToString("dd/MM/yyyy hh:mm:ss")</h4>*@
-    
-    <h2>Soy un desarrollador con pasión por crear soluciones eficientes a travéz del software</h2>
-    <img class="img-fluid w-25 rounded-circle"
-         src="~/images/foto01.jpg" alt="Imagen de Perfil" />
-</div>
-
-@*Logo .Net*@
-<div class="text-center mb-3">
-    <img class="img-fluid w-25" src="~/images/dotnet-imagen-2.png" />
-</div>
-
-@*Bloque Bienvenida*@
-<div class="row justify-content-center text-center bg-primary">
-    <div class="col col-md-7 seccion-bienvenida">
-        <h2>Bienvenido a mi portafolio</h2>
-        <p>
-            Soy un programdor con mas de 13 años de experiencia en desarrollo de
-            Software. He trabajado en proyectos de diferentes tamaños y complejidades,
-            utilizando varios lenguajes de prorgramación y tecnologías.
-            Entre mis principales proyectos destacan la implemntacion de un sistema de 
-            gestión de ventas y control de inventario para una cadena de tiendas de electrónica,
-            utilizando C# y MSSQL, cumpliendo con los requerimientos del clinete y con 
-            altos estandares de calidad.
-        </p>
-    </div>
-</div>
+@Html.Partial("_Presentacion")
 
 @*Bloque experiencias*@
-<div style="margin-top: -100px;">
-    <div class="row justify-content-center text-center">
-        <div class="col col-3 bg-white experiencia-i habilidades">
-            <i class="bi bi-hdd-fill"></i>
-            <h3>Backend</h3>
-            <p>Trabajo desdel el desarrollo, pruebas automaticas
-                y puesta en produccion con entrega continua.
-            </p>
-
-            <p class="text-primary cabecera">Stack</p>
-            <p>Asp.Net Core, SQL Server</p>
-
-            <p class="text-primary cabecera">Experiencia</p>
-            <ul>
-                <li>Web Apis</li>
-                <li>Entity Framework</li>
-                <li>Dapper</li>
-                <li>Queries especiales</li>
-            </ul>
-        </div>
-
-        <div class="col col-3 bg-white experiencia-d habilidades">
-            <i class="bi bi-code-slash"></i>
-            <h3>Frontend</h3>
-            <p>
-                Puedo crear frontends robustos los cuales cumplen con los 
-                requisitos del negocio.
-            </p>
-
-            <p class="text-primary cabecera">Stack</p>
-            <p>Angular, Blazor, VueJs/p>
-
-            <p class="text-primary cabecera">Experiencia</p>
-            <ul>
-                <li>Angular Material</li>
-                <li>Blazor WASM</li>
-                <li>JQuery</li>
-                <li>Pruebas Automaticas</li>
-                <li>Markdown</li>
-            </ul>
-        </div>
-
-    </div>
-</div>
+@Html.Partial("_Experiencia")
 
 @*Listado de Proyectos*@
-
+<partial name="_Proyectos" model="Model.Proyectos" />
 
 
 @*@if (Model.Edad >= 21)
@@ -113,3 +40,26 @@
 
         }
     </ul>*@
+
+
+@*<h2>Ejemplo 1</h2>
+<div>
+    Guid Transitorio: <b style="color: red;">@Model.EjemploGuid_1.Transitorio</b>
+</div>
+<div>
+    Guid Delimitado: <b style="color: green;">@Model.EjemploGuid_1.Delimitado</b>
+</div>
+<div>
+    Guid Unico: <b style="color: blue;">@Model.EjemploGuid_1.Unico</b>
+</div>
+
+<h2>Ejemplo 2</h2>
+<div>
+    Guid Transitorio: <b style="color: red;">@Model.EjemploGuid_2.Transitorio</b>
+</div>
+<div>
+    Guid Delimitado: <b style="color: green;">@Model.EjemploGuid_2.Delimitado</b>
+</div>
+<div>
+    Guid Unico: <b style="color: blue;">@Model.EjemploGuid_2.Unico</b>
+</div>*@
