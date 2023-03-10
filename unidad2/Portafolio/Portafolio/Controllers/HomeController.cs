@@ -10,17 +10,41 @@ namespace Portafolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositorioProyectos repositorioProyectos;
+        private readonly IConfiguration configuration;
 
         public HomeController(
             ILogger<HomeController> logger,
-            IRepositorioProyectos repositorioProyectos
+            IRepositorioProyectos repositorioProyectos,
+            IConfiguration configuration
         )
         {
             _logger = logger;
             this.repositorioProyectos = repositorioProyectos;
+            this.configuration = configuration;
         }
         public IActionResult Index()
         {
+
+            /*
+             * LogTrace
+             * LogDebug
+             * LogInformation
+             * LogWarning
+             * LogError
+             * LogCritical
+             */
+
+            //_logger.LogTrace("Este es un mensaje de Trace");
+            //_logger.LogDebug("Este es un mensaje de Debug");
+            //_logger.LogInformation("Este es un mensaje de Informtion");
+            //_logger.LogWarning("Este es un mensaje de Warning");
+            //_logger.LogError("Este es un mensaje de Error");
+            //_logger.LogCritical("Este es un mensaje de Critical");
+
+            //var apellido = configuration.GetValue<string>("apellido");
+
+            //_logger.LogInformation("El apellido es:" + apellido);
+
             var proyectos = repositorioProyectos.ObtenerProyectos().Take(3).ToList();
             
             var modelo = new HomeIndexViewModel() 
@@ -30,9 +54,10 @@ namespace Portafolio.Controllers
             return View(modelo);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Proyectos()
         {
-            return View();
+            var proyectos = repositorioProyectos.ObtenerProyectos();
+            return View(proyectos);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
